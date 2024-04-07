@@ -1,0 +1,17 @@
+#include <Servo.h>
+
+Servo myservo; //create servo variable
+const int buttonPin = 2;
+
+void setup(){
+  myservo.attach(9); //attaches the servo on pin 9
+  pinMode(buttonPin, INPUT);
+}
+
+void loop(){
+  if(digitalRead(buttonPin) == HIGH){
+    myservo.write(180); //tells the servo what angle to turn to 0-180
+  } else {
+    myservo.write(0);
+  }
+}
