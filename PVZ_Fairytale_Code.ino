@@ -3,21 +3,30 @@
 
 #define SERVO_PIN_1 9    
 #define SERVO_PIN_2 10  
-#define TOUCH_SENSOR_PIN A0 /
 #define PIEZO_PIN 3      
 #define LED_PIN_1 4      
 #define LED_PIN_2 5      
-#define RESET_BUTTON_PIN 6 
+
+const int switch1 = 13;
+const int switch2 = 12
+const int switch3 = 11;
+const int switch4 = 7
+int switch state
 
 Servo servo1; 
 Servo servo2; 
 
 bool firstCircuitConnected = false; 
-bool secondCircuitConnected = false; 
+bool secondCircuitConnected = false;
+bool thirdCircuitConnected = false; 
 bool touchSensorActivated = false; 
+ 
 
 
 void setup() {
+
+serial.begin(9600);
+
  servo1.attach(SERVO_PIN_1); 
  servo2.attach(SERVO_PIN_2); 
  pinMode(TOUCH_SENSOR_PIN, INPUT); 
